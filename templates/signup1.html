@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .fas {
+            position: relative;
+            top: 150px;
+            padding-left: 40px;
+            color: white;
+            font-size: 70px;
+
+        }
+
+        .black {
+            background-color: black;
+            height: 120px;
+
+
+        }
+
+        .con {
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 90px;
+            font-family: interlude;
+            top: -20px;
+        }
+
+        .image {
+
+            background-image: url(../static/qw.jpg);
+            height: 1000px;
+            background-position: center;
+            background-size: cover;
+
+            position: relative;
+            top: -27px;
+        }
+
+        .container {
+            position: relative;
+            bottom: -100px;
+
+            background-color: rgba(25, 25, 25, 0.5);
+
+            height: 700px;
+        }
+    </style>
+    <title>Side Navigation Bar</title>
+
+    <!-- Compiled and minified jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.collapsible').collapsible();
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/fb965e2e7d.js" crossorigin="anonymous"></script>
+</head>
+<body bgcolor="black">
+<div class="black">
+    <a href="#" data-activates="slide-out" class="button-collapse">
+        <div class="con"> CLARET</div>
+    </a>
+
+
+    <ul id="slide-out" class="side-nav" style="background-color: black;">
+        <li><a href="#!"><i class="fas fa-house-damage"></i></a></li>
+        <br><br><br>
+        <li><a href="#!"><i class="fas fa-user-plus"></i></a></li>
+        <br><br><br>
+        <li><a href="#!"><i class="fas fa-fire"></i></a></li>
+        <br><br><br>
+        <li><a href="#!"><i class="fas fa-blog"></i></i></a></li>
+
+    </ul>
+</div>
+<form action="register" method="post">
+    <div class="image">
+
+        <div class="container">
+            <br>
+            <h2 style="color: black;text-align: center;">Sign Up</h2><br><br>
+            <div class="row" style="text-align: center;">
+                <div class="col s2 m2 l2 "> &nbsp;</div>
+                <div class="col s4 m4 l4">
+                    <input type="text" name="name" placeholder="UserName" style="font-size: 25px;text-align: center;">
+                </div>
+
+                <div class="col s4   m4 l4">
+                    <input type="text" name="phoneno" placeholder="Phone No."
+                           style="font-size: 25px;text-align: center;">
+
+                </div>
+            </div>
+
+            <div class="row" style="text-align: center;">
+                <div class="col s2 m2 l2 "> &nbsp;</div>
+                <div class="col s4 m4 l4">
+
+                    <input type="text" name="email" placeholder="Email" style="font-size: 25px;text-align: center;">
+                </div>
+
+                <div class="col s4 m4 l4">
+                    <input type="text" name="city" placeholder="City" style="font-size: 25px;text-align: center;">
+
+
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <div class="col s2 m2 l2 "> &nbsp;</div>
+                <div class="col s4 m54 l4">
+                    <input type="text" name="age" placeholder="Age" style="font-size: 25px;text-align: center;">
+                    <span class="helper-text" style="color: black;">You must be over 18 to donate blood</span></div>
+
+                <div class="col s4 m54 l4">
+                    <input type="text" name="address" placeholder="Address" style="font-size: 25px;text-align: center;">
+
+
+                </div>
+            </div>
+
+            <div class="row" style="text-align: center;">
+                <div class="col s2 m2 l2 "> &nbsp;</div>
+                <div class="col s4 m54 l4">
+
+                    <select class="browser-default" name="bloodgroup"
+                            style="font-size: 20px;color: white;text-align: center;background-color: transparent;position: ">
+
+                        <option value="" disabled selected
+                                style="position: relative;left: 100px;background-color: transparent;">Blood Group
+                        </option>
+
+                        <option value="A+" style="color: black;back">A+</option>
+
+                        <option value="A-" style="color: black">A-</option>
+
+                        <option value="B+" style="color: black">B+</option>
+
+                        <option value="B-" style="color: black">B-</option>
+
+                        <option value="O+" style="color: black">O+</option>
+
+                        <option value="O-" style="color: black">O-</option>
+
+                        <option value="AB+" style="color: black">AB+</option>
+
+                        <option value="AB-" style="color: black">AB-</option>
+
+                    </select>
+
+
+                </div>
+
+
+                <div class="col s4 m54 l4">
+                    <input type="Password" name="password" placeholder="Password"
+                           style="font-size: 25px;text-align: center;">
+
+
+                </div>
+            </div>
+
+            <br><br>
+
+
+            <div class="row">
+                <div class="col s5">&nbsp;&nbsp;</div>
+                <input type="submit" value=" Sign In"
+                       style="font-size:40px;color: black;background-color: transparent;box-shadow: 10px 10px 10px black;position:relative;left:33px;">
+
+            </div>
+        </div>
+
+
+    </div>
+
+</form>
+<footer class="page-footer black" style="position: relative;top: 100px">
+
+    <div class="row">
+        <div class="col s2 m2 l2"
+             style="font-family: interlude;font-size: 40px;color: white;position: relative;top: -100px ">CLARET
+        </div>
+        <div class="col s1">&nbsp;</div>
+        <div class="col s1 " style="position: relative;top: -100px;">
+
+
+            <h5 class="white-text">Project by:</h5>
+
+            <ul>
+
+                <li><a class="white-text" href="https://github.com/ayush12451">Ayush</a></li>
+
+                <li><a class="white-text" href="https://github.com/achyutshantanu">Shantanu</a></li>
+
+                <li><a class="white-text" href="https://github.com/devashsih">Devashish</a></li>
+
+                <li><a class="white-text" href="https://github.com/Areeb0206">Areeb</a></li>
+                <br>
+                <p style="color: white;">Using <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                </p>
+
+            </ul>
+
+
+        </div>
+        <div class="col s1">&nbsp;</div>
+        <div class="col s1" style="position: relative;top: -100px;">
+
+            <h5 class="white-text">Links</h5>
+
+            <ul>
+
+                <li><a class="white-text" href='login.php'>Login</a></li>
+
+                <li><a class="white-text" href="register.php">Register</a></li>
+
+                <li><a class="white-text" href="donors.php">Donors</a></li>
+
+                <li><a class="white-text" href="index.html">Home</a></li>
+                <br>
+                <p style="color: white">Follow on <a class="orange-text text-lighten-3"
+                                                     href="https://github.com/ayush12451/blood_bank">Github</a></p>
+            </ul>
+        </div>
+        <div class="col s1">&nbsp;</div>
+
+        <div class="col s1" style="position: relative;top: -100px;">
+
+            <h5 class="white-text">Resources</h5>
+
+            <ul>
+
+                <li><a class="white-text" href='login.php'>FAQs</a></li>
+
+                <li><a class="white-text" href="register.php">Benefits</a></li>
+
+                <li><a class="white-text" href="donors.php">Types of Blood</a></li>
+
+                <li><a class="white-text" href="index.html">Share your Story</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>
