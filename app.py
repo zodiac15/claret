@@ -1,42 +1,47 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/login')
 def login():
-    render_template('signin.html')
+    return render_template('signin.html')
 
 
-@app.route('/signup')
+@app.route('/register')
 def signup():
-    render_template('signup1.html')
+    return render_template('signup1.html')
 
 
 @app.route('/benefits')
 def benefits():
-    render_template('benefits.html')
+    return render_template('benefits.html')
 
 
 @app.route('/eligible')
 def eligible():
-    render_template('elegible.html')
+    return render_template('elegible.html')
 
 
 @app.route('/search')
 def search():
-    render_template('search.html')
+    return render_template('search.html')
 
 
 @app.route('/types')
 def bloodtypes():
-    render_template('typeofblood.html')
+    return render_template('typeofblood.html')
+
+
+@app.route('/test')
+def base():
+    return render_template('temp.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

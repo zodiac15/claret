@@ -1,451 +1,294 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
 
-    <style type="text/css">
-
-        .fas {
-            position: relative;
-            top: 150px;
-            padding-left: 40px;
-            color: white;
-            font-size: 50px;
-
-        }
-
-        .black {
-            background-color: black;
-            height: 100px;
-
-
-        }
-
-        .con {
-            position: relative;
-            color: white;
-            text-align: center;
-            font-size: 70px;
-            font-family: interlude;
-        }
-
-        .bt {
-            font-size: 25px;
-            font-family: interlude;
-            color: red;
-        }
-
-        .image {
-            background-image: url("images/bt.jpg");
-            height: 230px;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-    </style>
-    <link type='text/css' rel='stylesheet' href='../static/main.css' media='screen,projection' ;>
-
-    <!-- Compiled and minified jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-
-    <title>Side Navigation Bar</title>
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".button-collapse").sideNav();
-            $('.collapsible').collapsible();
-        });
-    </script>
-</head>
-<body>
-<div class="black">
-    <a href="#" data-activates="slide-out" class="button-collapse">
-        <div class="con"> CLARET</div>
-    </a>
-
-
-    <ul id="slide-out" class="side-nav" style="background-color: black;">
-        <li><a href="#!"><i class="fas fa-house-damage"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-user-plus"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-fire"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-blog"></i></i></a></li>
-
-    </ul>
-</div>
-
-
-<br><br><br>
-<div class="row">
-    <div class="col s12 m12 l12">
-        <h3 style="font-family: interlude;font-size: 50px;color:purple;text-align: center;">
-            Blood Types : Facts and Information on Blood Group Types</h3>
-    </div>
-
-</div>
-<div class="row">
-
-    <div class="col s12 m12 l12">
-
-        <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-            Main Document
-            <h3>
-    </div>
-</div>
-<div class="row">
-    <div class="col s1 m1 l1">&nbsp;</div>
-    <div class="col s10 m10 l10">
-
-        <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">
-            When a person's blood is analyzed under a microscope distinct blood differences are visible. In the early
-            20th century, an Austrian scientist named Karl Landsteiner classified blood according to those differences.
-            Landsteiner observed two distinct chemical molecules present on the surface of the red blood cells. He
-            labeled one molecule "A" and the other molecule "B".
-            <h3>
-    </div>
-    <div class="col s1 m1 l1">&nbsp;</div>
-</div>
-<div class="row">
-
-    <div class="col s12 m12 l12">
-        <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-            Blood Types
-            <h3>
-    </div>
-</div>
-<div class="row">
-
-    <div class="col s12 m12 l12">
-        <div class="image"></div>
-    </div>
-</div>
-<div class="row">
-    <div class="col s1 m1 l1">&nbsp;</div>
-    <div class="col s10 m10 l10">
-
-
-        <h3 style="font-family: interlude;font-size: 25px;color:black"> A blood type (also called a blood group) is
-            defined as the classification of blood based on the presence or absence of inherited antigenic substances on
-            the surface of red blood cells (RBCs). A series of related blood types constitutes a blood group system,
-            such as the Rh or ABO system. The frequencies of the ABO and Rh blood types vary from population to
-            population.
-
-
-            <p>
-            <div class="bt"> Blood Type A -</div>
-            If the red blood cell has only "A" molecules on it,
-            has only A antigen on red cells (and B antibody in the plasma)</p>
-            <p>
-            <div class="bt"> Blood Type B -</div>
-            If the red blood cell has only "B" molecules on it,
-            has only B antigen on red cells (and A antibody in the plasma)
-            </p>
-            <p>
-            <div class="bt"> Blood Type AB -</div>
-            If the red blood cell has a mixture of both "A" & "B" molecules,
-            has both A and B antigens on red cells (but neither A nor B antibody in the plasma)
-            </p>
-            <p>
-            <div class="bt"> Blood Type O -</div>
-            If the red blood cell has neither "A" or "B" molecule,
-            has neither A nor B antigens on red cells (but both A and B antibody are in the plasma)
-            </p>
-        </h3>
+{% block content %}
+    <br><br><br>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3 style="font-family: interlude;font-size: 50px;color:purple;text-align: center;">
+                Blood Types : Facts and Information on Blood Group Types</h3>
+        </div>
 
     </div>
-</div>
-<div class="row">
-    <div class="col s12 m12 l12">
-        <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-            Donating Blood by Compatible Type:
-            <h3>
+    <div class="row">
 
+        <div class="col s12 m12 l12">
+
+            <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                Main Document
+                <h3>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col s1 m1 l1">&nbsp;</div>
-    <div class="col s10 m10 l10">
+    <div class="row">
+        <div class="col s1 m1 l1">&nbsp;</div>
+        <div class="col s10 m10 l10">
 
-        <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;"> Blood types are very
-            important when a blood transfusion is necessary. In a blood transfusion, a patient must receive a blood type
-            compatible with his or her own blood type. If the blood types are not compatible, red blood cells will clump
-            together, making clots that can block blood vessels and cause death.
-        </h3>
+            <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">
+                When a person's blood is analyzed under a microscope distinct blood differences are visible. In the
+                early
+                20th century, an Austrian scientist named Karl Landsteiner classified blood according to those
+                differences.
+                Landsteiner observed two distinct chemical molecules present on the surface of the red blood cells. He
+                labeled one molecule "A" and the other molecule "B".
+                <h3>
+        </div>
+        <div class="col s1 m1 l1">&nbsp;</div>
     </div>
-    <div class="col s1 m1 l1">&nbsp;</div>
-</div>
+    <div class="row">
 
-<div class="row">
-    <div class="col s1 m1 l1">&nbsp;</div>
-    <div class="col s10 m10 l10">
+        <div class="col s12 m12 l12">
+            <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                Blood Types
+                <h3>
+        </div>
+    </div>
+    <div class="row">
 
-        <footer class="page-footer purple " style="height: 60px;color:white;">
-            <p style="position: relative;left: 20px;top: -35px;font-size: 28px;">Compatible Blood Type Donors</p>
-        </footer>
+        <div class="col s12 m12 l12">
+            <div class="image"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s1 m1 l1">&nbsp;</div>
+        <div class="col s10 m10 l10">
 
+
+            <h3 style="font-family: interlude;font-size: 25px;color:black"> A blood type (also called a blood group) is
+                defined as the classification of blood based on the presence or absence of inherited antigenic
+                substances on
+                the surface of red blood cells (RBCs). A series of related blood types constitutes a blood group system,
+                such as the Rh or ABO system. The frequencies of the ABO and Rh blood types vary from population to
+                population.
+
+
+                <p>
+                <div class="bt"> Blood Type A -</div>
+                If the red blood cell has only "A" molecules on it,
+                has only A antigen on red cells (and B antibody in the plasma)</p>
+                <p>
+                <div class="bt"> Blood Type B -</div>
+                If the red blood cell has only "B" molecules on it,
+                has only B antigen on red cells (and A antibody in the plasma)
+                </p>
+                <p>
+                <div class="bt"> Blood Type AB -</div>
+                If the red blood cell has a mixture of both "A" & "B" molecules,
+                has both A and B antigens on red cells (but neither A nor B antibody in the plasma)
+                </p>
+                <p>
+                <div class="bt"> Blood Type O -</div>
+                If the red blood cell has neither "A" or "B" molecule,
+                has neither A nor B antigens on red cells (but both A and B antibody are in the plasma)
+                </p>
+            </h3>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                Donating Blood by Compatible Type:
+                <h3>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s1 m1 l1">&nbsp;</div>
+        <div class="col s10 m10 l10">
+
+            <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;"> Blood types are very
+                important when a blood transfusion is necessary. In a blood transfusion, a patient must receive a blood
+                type
+                compatible with his or her own blood type. If the blood types are not compatible, red blood cells will
+                clump
+                together, making clots that can block blood vessels and cause death.
+            </h3>
+        </div>
         <div class="col s1 m1 l1">&nbsp;</div>
     </div>
 
     <div class="row">
-        <div class="col s2 m2 l2">&nbsp;</div>
+        <div class="col s1 m1 l1">&nbsp;</div>
         <div class="col s10 m10 l10">
 
-            <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">
-
-                <table>
-                    <tr>
-                        <th>Blood Type</th>
-                        <th>Donate Blood To</th>
-                        <th>Recieve Blood From</th>
-                    </tr>
-                    <tr>
-                        <td>A+<br><br>O+<br><br>B+<br><br>AB+<br><br>A-<br><br>O-<br><br>B-<br><br>AB-</td>
-                        <td>A+ AB+<br><br>O+ A+ B+ AB+<br><br>B+ AB+<br><br>AB+<br><br>A- AB+
-                            AB-<br><br>Everyone<br><br>B- AB- AB+<br><br>AB- AB+
-                        </td>
-                        <td>A+ A- O- O+<br><br>O+ O-<br><br>B+ B- O- O+<br><br>Everyone<br><br>A- O-<br><br>O-
-                            B-<br><br>B-<br><br>AB-
-                        </td>
-
-                </table>
-            </h3>
+            <footer class="page-footer purple " style="height: 60px;color:white;">
+                <p style="position: relative;left: 20px;top: -35px;font-size: 28px;">Compatible Blood Type Donors</p>
+            </footer>
 
             <div class="col s1 m1 l1">&nbsp;</div>
         </div>
 
         <div class="row">
-            <div class="col s12 m12 l12">
-                <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-                    What is the Rarest Blood Type?
-                    <h3>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s1 m1 l1">&nbsp;</div>
+            <div class="col s2 m2 l2">&nbsp;</div>
             <div class="col s10 m10 l10">
 
-                <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">According to the
-                    American Red Cross the rarest is AB(-), present in 1% of the Caucasians, in African Americans it is
-                    even rarer. B(-) and O(-) are also very rare, each accounting for less than 5% of the world's
-                    population. Some people with rare blood types bank their own blood in advance of surgical procedures
-                    to ensure that blood is available to them. <BR>
-                    A blood type is considered rare if fewer than 1 in 1,000 people have them. One of the rarest blood
-                    types in the world is Rh-null, which lack any antigens in the Rh system. There are only 9 active
-                    donors in the community of rare blood donors that have Rh-null blood. Rh-null is considered a
-                    universal blood for anyone with a rare blood type within the Rh system. However, anyone who has
-                    Rh-null blood can only receive Rh-null blood in a transfusion.
-                </h3>
-            </div>
-            <div class="col s1 m1 l1">&nbsp;</div>
-        </div>
+                <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">
 
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-                    What Does Blood Group RH Factor Mean?
-                    <h3>
+                    <table>
+                        <tr>
+                            <th>Blood Type</th>
+                            <th>Donate Blood To</th>
+                            <th>Recieve Blood From</th>
+                        </tr>
+                        <tr>
+                            <td>A+<br><br>O+<br><br>B+<br><br>AB+<br><br>A-<br><br>O-<br><br>B-<br><br>AB-</td>
+                            <td>A+ AB+<br><br>O+ A+ B+ AB+<br><br>B+ AB+<br><br>AB+<br><br>A- AB+
+                                AB-<br><br>Everyone<br><br>B- AB- AB+<br><br>AB- AB+
+                            </td>
+                            <td>A+ A- O- O+<br><br>O+ O-<br><br>B+ B- O- O+<br><br>Everyone<br><br>A- O-<br><br>O-
+                                B-<br><br>B-<br><br>AB-
+                            </td>
 
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s1 m1 l1">&nbsp;</div>
-            <div class="col s10 m10 l10">
-
-                <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">According to the
-                    American Red Cross the rarest is AB(-), present in 1% of the Caucasians, in African Americans it is
-                    even rarer. B(-) and O(-) are also very rare, each accounting for less than 5% of the world's
-                    population. Some people with rare blood types bank their own blood in advance of surgical procedures
-                    to ensure that blood is available to them. <br>
-                    A blood type is considered rare if fewer than 1 in 1,000 people have them. One of the rarest blood
-                    types in the world is Rh-null, which lack any antigens in the Rh system. There are only 9 active
-                    donors in the community of rare blood donors that have Rh-null blood. Rh-null is considered a
-                    universal blood for anyone with a rare blood type within the Rh system. However, anyone who has
-                    Rh-null blood can only receive Rh-null blood in a transfusion.
-                </h3>
-            </div>
-            <div class="col s1 m1 l1">&nbsp;</div>
-        </div>
-
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-                    Blood Type Diet:
-                    <h3>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s1 m1 l1">&nbsp;</div>
-            <div class="col s10 m10 l10">
-
-                <h3 style="font-family: interlude;font-size: 25px;color:black"> A blood type (also called a blood group)
-                    is defined as the classification of blood based on the presence or absence of inherited antigenic
-                    substances on the surface of red blood cells (RBCs). A series of related blood types constitutes a
-                    blood group system, such as the Rh or ABO system. The frequencies of the ABO and Rh blood types vary
-                    from population to population.
-
-
-                    <p>
-                    <div class="bt"> Blood Type A -</div>
-                    Flourishes on vegetarian diets, "the inheritance of their more settled and less warlike farmer
-                    ancestors," says D'Adamo. The type A diet contains soy proteins, grains, and organic vegetables and
-                    encourages gentle exercise.</p>
-                    <p>
-                    <div class="bt"> Blood Type B -</div>
-                    The nomadic blood type B has a tolerant digestive system and can enjoy low-fat dairy, meat, and
-                    produce but, among other things, should avoid wheat, corn, and lentils, D'Adamo says. If you're type
-                    B, it's recommended you exercise moderately.
-                    </p>
-                    <p>
-                    <div class="bt"> Blood Type AB -</div>
-                    Has a sensitive digestive tract and should avoid chicken, beef, and pork but enjoy seafood, tofu,
-                    dairy, and most produce. The fitness regimen for ABs is calming exercises.
-                    </p>
-                    <p>
-                    <div class="bt"> Blood Type O -</div>
-                    Your digestive tract retains the memory of ancient times, says D'Adamo, so your metabolism will
-                    benefit from lean meats, poultry, and fish. You're advised to restrict grains, breads, and legumes,
-                    and to enjoy vigorous exercise.
-                    </p>
+                    </table>
                 </h3>
 
+                <div class="col s1 m1 l1">&nbsp;</div>
             </div>
-            <div class="col s1 m1 l1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
-                    Quick Facts:
-                    <h3>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s1 m1 l1">&nbsp;</div>
-            <div class="col s10 m10 l10">
-
-                <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;"><P>A total of 35
-                    human blood group systems are now recognized by the International Society of Blood Transfusion
-                    (ISBT).</P>
-                    <P>
-                        With regard to transfusions of packed red blood cells, individuals with type O Rh D negative
-                        blood are often called universal donors, and those with type AB Rh D positive blood are called
-                        universal recipients.</P>
-                    <P>Many pregnant women carry a fetus with a blood type which is different from their own, which is
-                        not a problem</P>
-                    <P>Your body carries around four to six liters (7 to 10.5 pints) of blood.</P>
-                    <P>About 5 million Americans need blood transfusions every year.</P>
-                </h3>
-            </div>
-            <div class="col s1 m1 l1">&nbsp;</div>
-        </div>
-
-        <footer class="page-footer black" style="height: 450px;color: black;position: relative;bottom: -100px;">
 
             <div class="row">
-                <div class="col s4 m4 l4"
-                     style="font-family: interlude;font-size: 40px;color: white;position: relative;bottom: -70px;">
-                    CLARET
-                </div>
-                <div class="col s1 m1 l1" style="position: relative;bottom: -70px;">
-
-
-                    <h5 class="white-text">Project by:</h5>
-
-                    <ul>
-
-                        <li><a class="white-text" href="https://github.com/ayush12451">Ayush</a></li>
-
-                        <li><a class="white-text" href="https://github.com/achyutshantanu">Shantanu</a></li>
-
-                        <li><a class="white-text" href="https://github.com/devashsih">Devashish</a></li>
-
-                        <li><a class="white-text" href="https://github.com/Areeb0206">Areeb</a></li>
-                        <br>
-                        <p style="color: white;">Using <a class="orange-text text-lighten-3"
-                                                          href="http://materializecss.com">Materialize</a></p>
-
-                    </ul>
-
+                <div class="col s12 m12 l12">
+                    <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                        What is the Rarest Blood Type?
+                        <h3>
 
                 </div>
-                <div class="col s1">&nbsp;</div>
-                <div class="col s1" style="position: relative;bottom: -70px;">
-
-                    <h5 class="white-text">Links</h5>
-
-                    <ul>
-
-                        <li><a class="white-text" href='login.php'>Login</a></li>
-
-                        <li><a class="white-text" href="register.php">Register</a></li>
-
-                        <li><a class="white-text" href="donors.php">Donors</a></li>
-
-                        <li><a class="white-text" href="index.html">Home</a></li>
-                        <br>
-                        <p style="color: white">Follow on <a class="orange-text text-lighten-3"
-                                                             href="https://github.com/ayush12451/blood_bank">Github</a>
-                        </p>
-                    </ul>
-                </div>
-                <div class="col s1">&nbsp;</div>
-
-                <div class="col s1" style="position: relative;bottom: -70px;">
-
-                    <h5 class="white-text">Resources</h5>
-
-                    <ul>
-
-                        <li><a class="white-text" href='login.php'>FAQs</a></li>
-
-                        <li><a class="white-text" href="register.php">Benefits</a></li>
-
-                        <li><a class="white-text" href="donors.php">Types of Blood</a></li>
-
-                        <li><a class="white-text" href="index.html">Share your Story</a></li>
-
-                    </ul>
-                </div>
-
             </div>
 
+            <div class="row">
+                <div class="col s1 m1 l1">&nbsp;</div>
+                <div class="col s10 m10 l10">
 
-        </footer>
+                    <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">According to the
+                        American Red Cross the rarest is AB(-), present in 1% of the Caucasians, in African Americans it
+                        is
+                        even rarer. B(-) and O(-) are also very rare, each accounting for less than 5% of the world's
+                        population. Some people with rare blood types bank their own blood in advance of surgical
+                        procedures
+                        to ensure that blood is available to them. <BR>
+                        A blood type is considered rare if fewer than 1 in 1,000 people have them. One of the rarest
+                        blood
+                        types in the world is Rh-null, which lack any antigens in the Rh system. There are only 9 active
+                        donors in the community of rare blood donors that have Rh-null blood. Rh-null is considered a
+                        universal blood for anyone with a rare blood type within the Rh system. However, anyone who has
+                        Rh-null blood can only receive Rh-null blood in a transfusion.
+                    </h3>
+                </div>
+                <div class="col s1 m1 l1">&nbsp;</div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                        What Does Blood Group RH Factor Mean?
+                        <h3>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s1 m1 l1">&nbsp;</div>
+                <div class="col s10 m10 l10">
+
+                    <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;">According to the
+                        American Red Cross the rarest is AB(-), present in 1% of the Caucasians, in African Americans it
+                        is
+                        even rarer. B(-) and O(-) are also very rare, each accounting for less than 5% of the world's
+                        population. Some people with rare blood types bank their own blood in advance of surgical
+                        procedures
+                        to ensure that blood is available to them. <br>
+                        A blood type is considered rare if fewer than 1 in 1,000 people have them. One of the rarest
+                        blood
+                        types in the world is Rh-null, which lack any antigens in the Rh system. There are only 9 active
+                        donors in the community of rare blood donors that have Rh-null blood. Rh-null is considered a
+                        universal blood for anyone with a rare blood type within the Rh system. However, anyone who has
+                        Rh-null blood can only receive Rh-null blood in a transfusion.
+                    </h3>
+                </div>
+                <div class="col s1 m1 l1">&nbsp;</div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                        Blood Type Diet:
+                        <h3>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s1 m1 l1">&nbsp;</div>
+                <div class="col s10 m10 l10">
+
+                    <h3 style="font-family: interlude;font-size: 25px;color:black"> A blood type (also called a blood
+                        group)
+                        is defined as the classification of blood based on the presence or absence of inherited
+                        antigenic
+                        substances on the surface of red blood cells (RBCs). A series of related blood types constitutes
+                        a
+                        blood group system, such as the Rh or ABO system. The frequencies of the ABO and Rh blood types
+                        vary
+                        from population to population.
 
 
-        <script src="https://kit.fontawesome.com/fb965e2e7d.js" crossorigin="anonymous"></script>
+                        <p>
+                        <div class="bt"> Blood Type A -</div>
+                        Flourishes on vegetarian diets, "the inheritance of their more settled and less warlike farmer
+                        ancestors," says D'Adamo. The type A diet contains soy proteins, grains, and organic vegetables
+                        and
+                        encourages gentle exercise.</p>
+                        <p>
+                        <div class="bt"> Blood Type B -</div>
+                        The nomadic blood type B has a tolerant digestive system and can enjoy low-fat dairy, meat, and
+                        produce but, among other things, should avoid wheat, corn, and lentils, D'Adamo says. If you're
+                        type
+                        B, it's recommended you exercise moderately.
+                        </p>
+                        <p>
+                        <div class="bt"> Blood Type AB -</div>
+                        Has a sensitive digestive tract and should avoid chicken, beef, and pork but enjoy seafood,
+                        tofu,
+                        dairy, and most produce. The fitness regimen for ABs is calming exercises.
+                        </p>
+                        <p>
+                        <div class="bt"> Blood Type O -</div>
+                        Your digestive tract retains the memory of ancient times, says D'Adamo, so your metabolism will
+                        benefit from lean meats, poultry, and fish. You're advised to restrict grains, breads, and
+                        legumes,
+                        and to enjoy vigorous exercise.
+                        </p>
+                    </h3>
 
-        <script type="text/javascript">var slideIndex = 0;
-        showSlides();
+                </div>
+                <div class="col s1 m1 l1">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h3 style="font-family: interlude;font-size: 40px;color:purple;text-align: center;">
+                        Quick Facts:
+                        <h3>
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        } </script>
-</body>
-</html>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s1 m1 l1">&nbsp;</div>
+                <div class="col s10 m10 l10">
+
+                    <h3 style="font-family: interlude;font-size: 25px;color:black;text-align: center;"><P>A total of 35
+                        human blood group systems are now recognized by the International Society of Blood Transfusion
+                        (ISBT).</P>
+                        <P>
+                            With regard to transfusions of packed red blood cells, individuals with type O Rh D negative
+                            blood are often called universal donors, and those with type AB Rh D positive blood are
+                            called
+                            universal recipients.</P>
+                        <P>Many pregnant women carry a fetus with a blood type which is different from their own, which
+                            is
+                            not a problem</P>
+                        <P>Your body carries around four to six liters (7 to 10.5 pints) of blood.</P>
+                        <P>About 5 million Americans need blood transfusions every year.</P>
+                    </h3>
+                </div>
+                <div class="col s1 m1 l1">&nbsp;</div>
+            </div>
+{% endblock %}

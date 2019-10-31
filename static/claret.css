@@ -1,0 +1,402 @@
+
+.fas {
+
+    position: relative;
+
+    top: 150px;
+
+    padding-left: 40px;
+
+    color: white;
+
+    font-size: 50px;
+
+
+}
+
+.black {
+
+    background-color: black;
+
+    height: 100px;
+
+
+}
+
+.con {
+
+    position: relative;
+    color: white;
+
+    text-align: center;
+
+    font-size: 70px;
+
+    font-family: interlude;
+
+}
+
+
+.image1 {
+
+    background-image: url("images/dna1.jpg");
+
+    height: 695px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+
+}
+
+.image2 {
+
+    background-image: url("images/dna.png");
+
+    height: 695px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+.image3 {
+
+    background-image: url("images/dna.jpg");
+
+    height: 695px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+.container {
+
+    width: 1000px;
+
+    position: relative;
+
+    right: 340px;
+
+    top: 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.container .card {
+
+    position: relative;
+
+    left: 250px;
+
+    width: 100px;
+
+    height: 170px;
+
+
+    display: flex;
+
+
+}
+
+.container .card .face {
+
+    position: relative;
+
+
+    width: 300px;
+
+    height: 200px;
+
+    transition: 0.5s;
+
+
+}
+
+
+.container .card .face.face1 {
+
+    position: relative;
+
+    background: black;
+
+    display: flex;
+
+    display: grid;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1;
+
+
+    transform: translateY(0px);
+
+}
+
+
+.container .card:hover .face.face1 {
+
+    transform: translateY(-50px);
+
+    background: black;
+
+}
+
+.container .card .face.face2 {
+
+    position: relative;
+
+    background: #e6005c;
+
+    display: flex;
+
+    transform: translateY(-106px);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px;
+
+    box-sizing: border-box;
+
+    box-shadow: 10px 20px 50px 10px black
+
+
+}
+
+.container .card:hover .face.face2 {
+
+    transform: translateY(0);
+
+    background: #cc0052;
+
+}
+
+
+.container .card .face.face2 .content p {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.container .card .face.face2 .content a {
+
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    color: white;
+
+    padding: 5px;
+
+    border: 1px solid #333
+
+}
+
+
+.container .card .face.face2 .content a:hover {
+
+    background-color: black;
+
+    content: #fff;
+
+
+}
+
+
+.container .card .face.face1 .content {
+
+    opacity: 0.3;
+
+    transition: 1s;
+
+}
+
+
+.container .card:hover .face.face1 .content {
+
+
+    opacity: 3;
+
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+
+    position: relative;
+
+    opacity: 0.8;
+
+
+    background-attachment: fixed;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+
+}
+
+.bgimg-1 {
+
+    background-image: url("images/3.jpg");
+
+    height: 500px;
+
+
+    justify-content: space-between;
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+.bgimg-2 {
+
+    background-image: url("images/3.jpg");
+
+    height: 400px;
+    justify-content: space-between;
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+.bgimg-3 {
+
+    background-image: url("images/3.jpg");
+
+    min-height: 400px;
+    justify-content: space-between;
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+.caption {
+
+    text-align: center;
+
+}
+
+
+h3 {
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    font: 20px "Lato", sans-serif;
+
+    color: #111;
+
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1024px,max-device-height: 500px)
+
+
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+
+        background-attachment: scroll;
+
+    }
+
+
+
+.image4 {
+    background-image: url("images/shre.jpg");
+
+    height: 250px;
+
+
+    width: 300px;
+    background-size: cover;
+
+
+    background-repeat: no-repeat;
+
+    box-shadow: 10px 10px 20px 5px black;
+
+
+}
+
+.image5 {
+    background-image: url("images/op.jpg");
+
+
+    height: 250px;
+
+    width: 300px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    box-shadow: 10px 10px 20px 5px black;
+
+}
+
+.image6 {
+    background-image: url("images/benefits.jpg");
+
+    height: 250px;
+
+
+    width: 300px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: 10px 10px 20px 5px black;
+
+}
+
+.flex-container {
+
+    text-align: center;
+
+}
+}

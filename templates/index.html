@@ -1,303 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
 
-    <style type="text/css">
-
-        .fas {
-            position: relative;
-            top: 150px;
-            padding-left: 40px;
-            color: white;
-            font-size: 50px;
-
-        }
-
-        .black {
-            background-color: black;
-            height: 100px;
-
-
-        }
-
-        .con {
-            position: relative;
-            color: white;
-            text-align: center;
-            font-size: 70px;
-            font-family: interlude;
-        }
-
-
-        .image1 {
-            background-image: url("images/dna1.jpg");
-            height: 695px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-
-        .image2 {
-            background-image: url("images/dna.png");
-            height: 695px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .image3 {
-            background-image: url("images/dna.jpg");
-            height: 695px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .container {
-            width: 1000px;
-            position: relative;
-            right: 340px;
-            top: 55px;
-            display: flex;
-            justify-content: space-between;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .container .card {
-            position: relative;
-            left: 250px;
-            width: 100px;
-            height: 170px;
-
-            display: flex;
-
-
-        }
-
-        .container .card .face {
-            position: relative;
-
-            width: 300px;
-            height: 200px;
-            transition: 0.5s;
-
-        }
-
-        .container .card .face.face1 {
-            position: relative;
-            background: black;
-            display: flex;
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-
-            transform: translateY(0px);
-        }
-
-        .container .card:hover .face.face1 {
-            transform: translateY(-50px);
-            background: black;
-        }
-
-        .container .card .face.face2 {
-            position: relative;
-            background: #e6005c;
-            display: flex;
-            transform: translateY(-106px);
-            justify-content: center;
-            align-items: center;
-            padding: 60px;
-            box-sizing: border-box;
-            box-shadow: 10px 20px 50px 10px black
-
-        }
-
-        .container .card:hover .face.face2 {
-            transform: translateY(0);
-            background: #cc0052;
-        }
-
-        .container .card .face.face2 .content p {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container .card .face.face2 .content a {
-
-            display: inline-block;
-            text-decoration: none;
-            font-weight: 900;
-            color: white;
-            padding: 5px;
-            border: 1px solid #333
-        }
-
-        .container .card .face.face2 .content a:hover {
-            background-color: black;
-            content: #fff;
-
-        }
-
-        .container .card .face.face1 .content {
-            opacity: 0.3;
-            transition: 1s;
-        }
-
-
-        .container .card:hover .face.face1 .content {
-
-            opacity: 3;
-        }
-
-        .bgimg-1, .bgimg-2, .bgimg-3 {
-            position: relative;
-            opacity: 0.8;
-
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
-
-        .bgimg-1 {
-            background-image: url("images/3.jpg");
-            height: 500px;
-
-
-            justify-content: space-between;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .bgimg-2 {
-            background-image: url("images/3.jpg");
-            height: 400px;
-            justify-content: space-between;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .bgimg-3 {
-            background-image: url("images/3.jpg");
-            min-height: 400px;
-            justify-content: space-between;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .caption {
-            text-align: center;
-        }
-
-        h3 {
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font: 20px "Lato", sans-serif;
-            color: #111;
-        }
-
-        /* Turn off parallax scrolling for tablets and phones */
-        @media only screen and (max-device-width: 1024px,max-device-height:
-
-        500px
-
-        ) {
-            .bgimg-1, .bgimg-2, .bgimg-3 {
-                background-attachment: scroll;
-            }
-        }
-
-        .image4 {
-            background-image: url("images/shre.jpg");
-            height: 250px;
-
-            width: 300px;
-            background-size: cover;
-
-            background-repeat: no-repeat;
-            box-shadow: 10px 10px 20px 5px black;
-
-        }
-
-        .image5 {
-            background-image: url("images/op.jpg");
-
-            height: 250px;
-            width: 300px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 10px 10px 20px 5px black;
-        }
-
-        .image6 {
-            background-image: url("images/benefits.jpg");
-            height: 250px;
-
-            width: 300px;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 10px 10px 20px 5px black;
-        }
-
-        .flex-container {
-            text-align: center;
-        }
-    </style>
-
-
-    <title>Side Navigation Bar</title>
-
-    <!-- Compiled and minified jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".button-collapse").sideNav();
-            $('.collapsible').collapsible();
-        });
-    </script>
-</head>
-<body>
-<div class="black">
-    <a href="#" data-activates="slide-out" class="button-collapse">
-        <div class="con"> CLARET</div>
-    </a>
-
-
-    <ul id="slide-out" class="side-nav" style="background-color: black;">
-        <li><a href="#!"><i class="fas fa-house-damage"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-user-plus"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-fire"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-blog"></i></i></a></li>
-
-    </ul>
-</div>
-
+{% block content %}
 
 <div class="slideshow-container">
-
-
     <div class="mySlides fade">
         <div class="image1">
             <br><br><br>
@@ -306,12 +11,10 @@
                 <div class="col s2 m2 l2">&nbsp;</div>
                 <div class="col s10 m10 l10" style="font-size: 55px;color: white">Increased Need</div>
             </div>
-
             <div class="row">
                 <div class="col s2 m2 l2">&nbsp;</div>
                 <div class="col s10 m10 l10" style="font-size: 50px;color: white">O+ AND O+</div>
             </div>
-
             <div class="row">
                 <div class="col s2 m2 l2">&nbsp;</div>
                 <div class="col s10 m10 l10"><a href="" class="waves-effect waves-default btn-flat "
@@ -320,26 +23,22 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="mySlides fade">
         <div class="image2">
-
             <br><br><br>
             <br><br><br>
             <div class="row">
                 <div class="col s2 m2 l2">&nbsp;</div>
                 <div class="col s10 m10 l10" style="font-size: 55px;color: white">Benefits Of</div>
             </div>
-
             <div class="row">
                 <div class="col s2 m2 l2">&nbsp;</div>
-                <div class="col s10 m10 l10" style="font-size: 50px;color: white">Blood Donations</div>
+                <div class="col s10 m10 l10" style="font-size: 50px;color: white">Blood DOnations</div>
             </div>
-
             <div class="row">
                 <div class="col s2 m2 l2">&nbsp;</div>
-                <div class="col s10 m10 l10"><a href="benefits.html">
+                <div class="col s10 m10 l10"><a href="http://localhost:8077/Blood_bank/benefits.html">
                     <button type="button" class=" waves-effect waves-default btn-flat "
                             style="color: white;font-size: 28px;position: relative;left: -25px;"><b>Benefits</b>
                     </button>
@@ -347,94 +46,95 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
-
 <div class="mySlides fade">
     <div class="image3">
         <br><br><br>
         <br><br><br>
-
         <div class="row">
             <div class="col s2 m2 l2">&nbsp;</div>
             <div class="col s10 m10 l10" style="font-size: 55px;color: white">Blood Donation</div>
         </div>
-
         <div class="row">
             <div class="col s2 m2 l2">&nbsp;</div>
             <div class="col s10 m10 l10" style="font-size: 53px;color: white">Saves The Lives</div>
         </div>
-
         <div class="row">
             <div class="col s2 m2 l2">&nbsp;</div>
+            <!-- dynamic -->
             <div class="col s10 m10 l10"><a href="">
                 <button type="button" class="waves-effect waves-light btn-flat "
-                        style="color: white;font-size: 28px;position: relative;left: -25px;"><b>Donate Now!</b></button>
+                        style="color: white;font-size: 28px;position: relative;left: -25px;"><b>Register Now!</b>
+                </button>
             </a>
             </div>
         </div>
     </div>
-
-
 </div>
-
-
+</div>
+</div>
+<!-- 3 cards upside down -->
 <div class="container">
-
+    <!-- 1st card  -->
     <div class="card">
         <div class="face face1">
             <div class="content">
                 <img src="images/eligible.png" width="170" height="100" style="position: relative;left: 70px">
-
             </div>
-
             <div class="face face2">
                 <div class="content">
-                    <h5><b><p style="color: white">Basic Requirements for
-                        Blood Donation</b>
-                        </p></h5>
-                    <a href="elegible.html">Check Eligibility</a>
-                    </b></h5></div>
+                    <h5>
+                        <b>
+                            <p style="color: white">Basic Requirements for
+                                Blood Donation
+                        </b>
+                        </p>
+                    </h5>
+                    <a href="http://localhost:8077/Blood_bank/elegible.html">Check Eligibility</a>
+                    </b></h5>
+                </div>
             </div>
         </div>
     </div>
+    <!-- 2nd card -->
     <div class="card">
         <div class="face face1">
             <div class="content">
                 <img src="images/share.jpg" width="130" height="100" style="position: relative;left: 80px">
-
             </div>
-
             <div class="face face2">
                 <div class="content">
-                    <p style="color: white;font-size: 20px;"><b>Spread the Importance of blood donation and share
-                        stories.
-                    </p></b><a href="/RegStory">Share Your Story</a>
-                    </p></div>
+                    <p style="color: white;font-size: 20px;">
+                        <b>
+                            Spread the Importance of blood donation and share stories.
+                            <!-- dynamic -->
+                    </p>
+                    </b><a href="<!-- dynamic -->">Share Your Story</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <!-- 3rd card -->
     <div class="card">
         <div class="face face1">
             <div class="content">
-                <img src="{{ images/type.jpg }}" width="120" height="100" style="position: relative;left: 80px">
-
+                <img src="images/type.jpg" width="120" height="100" style="position: relative;left: 80px">
             </div>
-
             <div class="face face2">
                 <div class="content">
-                    <b><p style="color: white;font-size: 20px;position: relative;">Discover how certain donations impact
-                        more lives.
-                    </p><a href="http://localhost:8077/Blood_bank/typeofblood.html">Type of Blood</a>
-                    </b></div>
+                    <b>
+                        <p style="color: white;font-size: 20px;position: relative;">Discover how certain donations
+                            impact more lives.
+                        </p>
+                        <a href="http://localhost:8077/Blood_bank/typeofblood.html">Type of BLoods</a>
+                    </b>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <br>
 <br>
 <br>
@@ -443,208 +143,89 @@
 <br>
 <br>
 <br>
-
-
+<!-- parallax starts -->
+<!-- 1st image -->
 <div class="bgimg-1" style="height: 500px;">
-
 </div>
 <br><br><br>
-
-
+<!-- video -->
 <div class="flex-container">
     <video controls="autoplay" style="text-align: center;height: 500px;width: 890px">
-
         <source src="images/b.mp4" type="video/mp4">
-
     </video>
 </div>
-
+</video> </div>
 <br><br><br>
+<!-- 2nd image -->
 <div class="bgimg-3" style="height: 500px;">
-
 </div>
-
-
+</div>
+<!-- carousal; -->
 <script type="text/javascript" language="javascript">
-
     $(document).ready(function () {
 
         $(".button-collapse").sideNav();//mobile screen menu init
-
-
         $('.carousel').carousel(); //carousel init
-
-
         $('.slider').slider({full_width: true});//slider init
-
     });
 
 
 </script>
-
 <br>
 <div class="row">
-
+    <!-- heading -->
     <div class="col s12 m12 l12" style="text-align: center;">
-        <p style="text-align: center;color: black;font-size: 50px;color: red">TESTIMONIALS</p></div>
-</div>
-<div class="row">
-
-    <div class="col s12 m12 l12" style="text-align: center;">
-
-        <div class="carousel " style="position: relative;bottom:150px;">
-
-            <a class="carousel-item" href="" style="opacity: 4"><img src="images\eric.png" width="400" height="300"></a>
-
-            <a class="carousel-item" href=""><img src="images\matt.png" width="400" height="300"></a>
-
-            <a class="carousel-item" href=""><img src="images\owen.png" width="400" height="300"></a>
-
-            <a class="carousel-item" href=""><img src="images\arthur.png" width="400" height="300"></a>
-
-            <a class="carousel-item" href=""><img src="images\sm.png" width="400" height="300"></a>
-
-        </div>
-
+        <p style="text-align: center;color: black;font-size: 50px;color: red;letter-spacing: 20px">TESTIMONIALS</p>
     </div>
 </div>
-
-
 <div class="row">
-
-    <div class="col s12 m12 l12" style="text-align: center;"><a href="RegStory"
+    <div class="col s12 m12 l12" style="text-align: center;">
+        <!-- carousal images -->
+        <div class="carousel " style="position: relative;bottom:150px;">
+            <a class="carousel-item" href="" style="opacity: 4"><img src="images\eric.png" width="400" height="300"></a>
+            <a class="carousel-item" href=""><img src="images\matt.png" width="400" height="300"></a>
+            <a class="carousel-item" href=""><img src="images\owen.png" width="400" height="300"></a>
+            <a class="carousel-item" href=""><img src="images\arthur.png" width="400" height="300"></a>
+            <a class="carousel-item" href=""><img src="images\sm.png" width="400" height="300"></a>
+        </div>
+    </div>
+    </p>
+</div>
+<div class="row">
+    <!-- dynamic  -->
+    <div class="col s12 m12 l12" style="text-align: center;"><a href="<!-- dynamic-->"
                                                                 class="waves-effect waves-default btn-flat  "
                                                                 style="color: black;font-size: 32px;position: relative;bottom: 100px"><b>Share
         Your Story </b></a>
     </div>
 </div>
-
-
-<div class="bgimg-1" style="height: 500px;">
-
 </div>
-
-
-<p style="text-align: center;font-size: 50PX;color: #b30000;position: relative;left: -10px;">HOW &nbsp;YOU&nbsp; CAN
-    &nbsp;HELP&nbsp;&nbsp;?</p>
+</div>
+<div class="bgimg-1" style="height: 500px;">
+</div>
+<!-- last paragraph -->
+<p style="text-align: center;font-size: 50PX;color: #b30000;position: relative;left: -10px; letter-spacing: 20px">HOW
+    YOU CAN HELP?</p>
 <br>
 <div class="row">
     <div class="col s2 m2 l2">&nbsp;</div>
     <div class="col s1 m1 l1">
-        <div class="image4"><a href="/RegStory" class="waves-effect waves-default btn-flat  "
+        <!-- dynamic -->
+        <div class="image4"><a href="<!-- dynamic -->" class="waves-effect waves-default btn-flat  "
                                style="color: black;font-size: 28px;width: 330px;position: relative;bottom: -300px;left: -10px;"><b>Share
             Your Story </b></a></div>
     </div>
     <div class="col s2 m2 l2">&nbsp;</div>
     <div class="col s1 m1 l1">
-        <div class="image5"><a href="http://localhost:8077/Blood_bank/typeofblood.html"
-                               class="waves-effect waves-default btn-flat  "
+        <div class="image5"><a href="typeofblood.html" class="waves-effect waves-default btn-flat  "
                                style="color: black;font-size: 28px;width: 330px;position: relative;bottom: -300px;left: 10px;"><b>Types
             of Blood </b></a></div>
     </div>
     <div class="col s2 m2 l2">&nbsp;</div>
     <div class="col s1 m1 l1">
-        <div class="image6"><a href="http://localhost:8077/Blood_bank/benefits.html"
-                               class="waves-effect waves-default btn-flat  "
+        <div class="image6"><a href="benefits.html" class="waves-effect waves-default btn-flat  "
                                style="color: black;font-size: 28px;width: 330px;position: relative;bottom: -300px;left: 10px;"><b>Donor
             Benefits </b></a></div>
     </div>
 </div>
-
-
-<br><br><br>
-<footer class="page-footer black" style="height: 350px;color: black;">
-
-    <div class="row">
-        <div class="col s12 m12 l12"
-             style="font-family: interlude;font-size: 40px;color: white;position: relative;bottom: -50px;">CLARET
-        </div>
-        <
-        <div class="col s3 m3 l3">&nbsp;</div>
-        <div class="col s1 ">
-
-
-            <h5 class="white-text">Project by:</h5>
-
-            <ul>
-
-                <li><a class="white-text" href="https://github.com/ayush12451">Ayush</a></li>
-
-                <li><a class="white-text" href="https://github.com/achyutshantanu">Shantanu</a></li>
-
-                <li><a class="white-text" href="https://github.com/devashsih">Devashish</a></li>
-
-                <li><a class="white-text" href="https://github.com/Areeb0206">Areeb</a></li>
-                <br>
-                <p style="color: white;">Using <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-                </p>
-
-            </ul>
-
-
-        </div>
-        <div class="col s1">&nbsp;</div>
-        <div class="col s1">
-
-            <h5 class="white-text">Links</h5>
-
-            <ul>
-
-                <li><a class="white-text" href='http://localhost:8077/Blood_bank/signin.html'>Login</a></li>
-
-                <li><a class="white-text" href="http://localhost:8077/Blood_bank/signup1.html">Register</a></li>
-
-                <li><a class="white-text" href="donors.php">Donors</a></li>
-
-                <li><a class="white-text" href="index.html">Home</a></li>
-                <br>
-                <p style="color: white">Follow on <a class="orange-text text-lighten-3"
-                                                     href="https://github.com/ayush12451/blood_bank">Github</a></p>
-            </ul>
-        </div>
-        <div class="col s1">&nbsp;</div>
-
-        <div class="col s1">
-
-            <h5 class="white-text">Resources</h5>
-
-            <ul>
-
-                <li><a class="white-text" href='login.php'>FAQs</a></li>
-
-                <li><a class="white-text" href="http://localhost:8077/Blood_bank/benefits.html">Benefits</a></li>
-
-                <li><a class="white-text" href="http://localhost:8077/Blood_bank/typeofblood.html">Types of Blood</a>
-                </li>
-
-                <li><a class="white-text" href="/RegStory">Share your Story</a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-
-</footer>
-
-
-<script src="https://kit.fontawesome.com/fb965e2e7d.js" crossorigin="anonymous"></script>
-
-<script type="text/javascript">var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-} </script>
-</body>
-</html>
+{% endblock %}
