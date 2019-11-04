@@ -20,7 +20,10 @@ def index():
 
 @app.route('/login')
 def login():
-    return render_template('login.html', title='Login')
+    if session['logged_in']==True:
+        redirect(url_for('user'))
+    else:
+        return render_template('login.html', title='Login')
 
 
 @app.route('/validate/login', methods=['GET', 'POST'])
@@ -60,7 +63,10 @@ def validate_login():
 
 @app.route('/register')
 def signup():
-    return render_template('register.html', title='Register')
+    if session['logged_in']==True:
+        redirect(url_for('user'))
+    else:
+        return render_template('register.html', title='Register')
 
 
 @app.route('/validate/register', methods=['GET', 'POST'])
