@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/claret.css">
-    <title>Side Navigation Bar</title>
+    <title>{{ title }}</title>
     <!-- Compiled and minified jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <!--Import Google Icon Font-->
@@ -20,50 +21,44 @@
 </head>
 <body style="background-image: url('/static/images/background.jpg')">
 <header>
-<div class="black">
-    <a href="#" data-activates="slide-out" class="button-collapse">
-        <div class="con"> CLARET</div>
-    </a>
-    <ul id="slide-out" class="side-nav" style="background-color: black;">
-        <li><a href="#!"><i class="fas fa-house-damage"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-user-plus"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-fire"></i></a></li>
-        <br><br>
-        <li><a href="#!"><i class="fas fa-blog"></i></i></a></li>
-
-    </ul>
-</div>
+    <nav class="black" style="height: 90px">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center" style="font-family: 'Josefin Sans';font-size: 50px;margin-top: 20px">CLARET</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down"style="margin-top: 10px" >
+                <li><a href="/user" ><i class="material-icons" style="font-size: 50px">account_circle</i></a></li>
+                <li ><a href="/register" style="font-size: 20px">Register</a></li>
+                <li><a href="/search" style="font-size: 20px">Find Donors</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 <main>
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 </main>
 
-<footer class="page-footer black">
-    <div class="container">
-        <div class="row">
-            <div class="col l4 s12">
-                <h1 style="color: white;font-family: interlude">CLARET</h1>
+<footer class="page-footer black" style="height: 300px">
+    <div class="container"><h1 style="color: white"></h1>
+        <div class="row" style="display: flex;">
+            <div class="col l2 s12" style="margin-left: 50px">
+                <h2 style="color: white;font-family: 'Josefin Sans'"><b>CLARET</b></h2>
             </div>
 
-            <div class="col l3 s12">
-                <h5 class="white-text">Links</h5>
+            <div class="col l2 s12" style="margin-left: 150px">
+                <h5 class="white-text" style="margin-left: 100px">Links</h5>
                 <ul>
-                    <li><a class="white-text" href='signin.html'>Login</a></li>
-                    <li><a class="white-text" href="signup1.html">Register</a></li>
-                    <li><a class="white-text" href="donors.php">Donors</a></li>
-                    <li><a class="white-text" href="index.html">Home</a></li>
+                    <li><a class="white-text" href='/login' style="margin-left: 100px">Login</a></li>
+                    <li><a class="white-text" href="/register" style="margin-left: 100px">Register</a></li>
+                    <li><a class="white-text" href="/search" style="margin-left: 100px">Donors</a></li>
+                    <li><a class="white-text" href="/" style="margin-left: 100px">Home</a></li>
                 </ul>
             </div>
-            <div class="col l3 offset-l2 s12">
-                <h5 class="white-text">Resources</h5>
+            <div class="col l3 s12" style="margin-left: 150px">
+                <h5 class="white-text" style="margin-left: 150px">Resources</h5>
                 <ul>
-                    <li><a class="white-text" href='login.php'>FAQs</a></li>
-                    <li><a class="white-text" href="benefits.html">Benefits</a></li>
-                    <li><a class="white-text" href="typeofblood.html">Types of Blood</a></li>
-                    <li><a class="white-text" href="<!-- dynamic -->">Share your Story</a></li>
+                    <li><a class="white-text" href="/benefits" style="margin-left: 150px">Benefits</a></li>
+                    <li><a class="white-text" href="/types" style="margin-left: 150px">Types</a></li>
+                    <li><a class="white-text" href="<!-- dynamic -->" style="margin-left: 150px">Share</a></li>
                 </ul>
             </div>
         </div>

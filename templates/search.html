@@ -1,39 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
-</head>
-<body>
-<form action="DonorS">
-    Enter your City: <input type="text" name="city"/><br/>
-    Enter your Bloodgroup:
-    <select class="browser-default" name="bloodgroup"
-            style="font-size: 20px;color: white;text-align: center;background-color: transparent;position: ">
+{% extends 'base.html' %}
 
-        <option value="" disabled selected style="position: relative;left: 100px;background-color: transparent;">Blood
-            Group
-        </option>
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="card white z-depth-3">
+                <br><br>
+                <h2 class='orange-text text-accent-3 center'><strong>Find Donors</strong></h2>
+                <br>
+                <div class="row" style="text-align:center">
+                    <br>
+                    <form action="/validate/search" method="post">
+                        <div class="container">
+                            <div class="input-field col s8 ">
+                                <input class="validate" id="city" style="text-transform: uppercase" name="city"
+                                       type="text">
+                                <label for="city">City</label>
+                            </div>
+                        </div>
+                        <div class="col s2">
+                            <button class="btn-floating waves-effect waves-light" type="submit" name="submit">
+                                <i class="material-icons">search</i>
+                            </button>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="divider"></div>
+                    <br>
+                    <p>{{ error }}</p>
+                    <div class="row">
+                        {% for person in result %}
+                        <div class="col s12 m4">
+                            <div class="card  z-depth-2" style="text-align:center">
+                                <div class="card-content">
+                                    <i class="material-icons large" style="color:#e20097;font-size: 140px">account_circle</i>
+                                    <span class="card-title">{{ person['name'] }}</span>
+                                    <p>Blood Group:'{{ person['blood_grp'] }}'</p>
+                                    <p>Age: {{ person['age'] }}</p>
+                                    <p>Email: {{ person['email'] }}</p>
+                                    <p>Phone No: {{ person['phone'] }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 
-        <option value="A+" style="color: black;back">A+</option>
-
-        <option value="A-" style="color: black">A-</option>
-
-        <option value="B+" style="color: black">B+</option>
-
-        <option value="B-" style="color: black">B-</option>
-
-        <option value="O+" style="color: black">O+</option>
-
-        <option value="O-" style="color: black">O-</option>
-
-        <option value="AB+" style="color: black">AB+</option>
-
-        <option value="AB-" style="color: black">AB-</option>
-
-    </select>
-
-    <input type="submit" value="search"/>
-</form>
-</body>
-</html>
+{% endblock %}

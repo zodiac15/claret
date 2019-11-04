@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="card white z-depth-3" style="text-align:center">
+                    <br><br>
+                    <i class="large material-icons" style="color: gray;font-size: 150px">account_circle</i>
+                    <br>
+                    <h3>{{ name }}</h3>
+                    <h4>{{ email }}</h4>
+                    <h4>{{ phno }}</h4>
+                    <br><br>
+                    <form action="/logout" method="post">
+                        <button class="btn waves-effect waves-light" name="logout" type="submit">Log-Out</button>
+                    </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
