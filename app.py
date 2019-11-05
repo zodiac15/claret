@@ -5,10 +5,10 @@ import mysql.connector
 app = Flask(__name__)
 app.secret_key = '2147aa348383f7cc243fbb58bd89ebe161e80d69'
 
-db = mysql.connector.connect(host="hostname",
-                             user="username",
-                             passwd="password",
-                             db=""
+db = mysql.connector.connect(host="localhost",
+                             user="root",
+                             passwd="",
+                             db="blood_bank"
                              )
 curr = db.cursor(buffered=True)
 
@@ -20,8 +20,8 @@ def index():
 
 @app.route('/login')
 def login():
-    if session['logged_in']==True:
-        redirect(url_for('user'))
+    if 'logged_in' in session and session['logged_in']==True:
+        return redirect(url_for('user'))
     else:
         return render_template('login.html', title='Login')
 
@@ -63,8 +63,8 @@ def validate_login():
 
 @app.route('/register')
 def signup():
-    if session['logged_in']==True:
-        redirect(url_for('user'))
+    if 'logged_in' in session and session['logged_in']==True:
+        return redirect(url_for('user'))
     else:
         return render_template('register.html', title='Register')
 
@@ -75,7 +75,7 @@ def validate_register():
     l_name = request.form.get('last_name')
     email = request.form.get('email')
     password = request.form.get('password')
-    p_number = request.form.get('phone_number')
+    p_number = request.form.get('phone_no')
     address = request.form.get('address')
     state = request.form.get('state')
     city = request.form.get('city')
@@ -113,9 +113,9 @@ def search():
     return render_template('search.html', title='Search')
 
 
-@app.route('/validate/search')
+@app.route('/validate/search', methods=['GET', 'POST'])
 def search_result():
-    city = request.form.get('city')
+    city = request.form.get('city').lower()
     try:
         sql = "Select first_name,last_name,blood_grp,email,phone_number,age from user where city ='{}'".format(
             str(city))
@@ -133,14 +133,19 @@ def search_result():
                    }
             return_list.append(dic)
 
-        return render_template('search.html', title='Search', result=return_list)
+        return render_template('search.html', title='Search',city=city.capitalize() ,result=return_list)
     except Exception as e:
         return render_template('search.html', title='Search', error="Error. Please try again.")
 
 
 @app.route('/user')
 def user():
-    return render_template('user.html', title='User', name=session['name'], email=session['email'], phno=session['ph'])
+    if 'logged_in' in session and session['logged_in']==True:
+        return render_template('user.html', title='User', name=session['name'], email=session['email'],
+                               phno=session['ph'])
+    else:
+        return redirect(url_for('login'))
+
 
 
 @app.route('/types')
@@ -148,10 +153,13 @@ def bloodtypes():
     return render_template('typeofblood.html', title='Types')
 
 
-@app.route('/logout')
+@app.route('/logout',methods=['post'])
 def logout():
     # remove the username from the session if it is there
-    session.pop('username', None)
+    session.pop('name')
+    session.pop('email')
+    session.pop('ph')
+    session.pop('logged_in')
     return redirect(url_for('index'))
 
 
